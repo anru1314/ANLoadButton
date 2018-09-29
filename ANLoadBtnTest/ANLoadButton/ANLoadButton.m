@@ -38,6 +38,12 @@
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self setEdgeInsets:self.edgeInsets];
+}
+
 - (void)setEdgeInsets:(UIEdgeInsets)edgeInsets
 {
     CGFloat w = self.bounds.size.width;
@@ -75,6 +81,12 @@
 - (void)show:(ANLoadResultType)type
 {
     switch (type) {
+        case ANLoadNormal:
+        {
+            if (self.isLoad) {
+                [self normal];
+            }
+        }
         case ANLoadSuccess:
         {
             if (self.isLoad) {
@@ -118,7 +130,14 @@
     
     [self loading];
 }
-
+- (void)normal
+{
+    self.isLoad = NO;
+    self.titleLabel.hidden = NO;
+    [self.successlayer removeFromSuperlayer];
+    [self.loadlayer removeFromSuperlayer];
+    [self.layer removeAllAnimations];
+}
 - (void)loading
 {
     self.isLoad = YES;
