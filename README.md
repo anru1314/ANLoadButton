@@ -1,7 +1,7 @@
 ### LOADING 按钮
 
 ### 效果
-![](2018-08-24 16.25.00.gif)
+![](https://github.com/anru1314/ANLoadButton/blob/master/2018-08-24%2016.25.00.gif)
 
 ### 使用
  
