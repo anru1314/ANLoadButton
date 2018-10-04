@@ -21,6 +21,8 @@ ANLoadButton *btn = [[ANLoadButton alloc] initWithFrame:CGRectMake(150, 200, 150
 [self.loadBtn show:ANLoadSuccess];
 展示失败
 [self.loadBtn show:ANLoadError];
+默认状态
+[self.loadBtn show:ANLoadNormal];
 ```
 
 
